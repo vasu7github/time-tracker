@@ -1,5 +1,8 @@
 pipeline {
  agent any
+ environment{
+ PATH = "C:\DevTools\apache-maven-3.6.3:$PATH"
+ }
  stages{
   stage("Welcome"){
    steps{
@@ -11,5 +14,8 @@ pipeline {
    git 'https://github.com/vasu7github/time-tracker.git' 
    }
    }
+  stage("MAVEN-BUILD"){
+   steps{
+    sh "mvn clean package"
   }
 }
