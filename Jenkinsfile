@@ -17,7 +17,7 @@ pipeline {
    }
   stage("MAVEN-BUILD"){
    steps{
-    bat "mvn clean package"
+    cmd_exec ("mvn clean package")
    }
   }
   }
