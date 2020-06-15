@@ -17,9 +17,7 @@ pipeline {
    }
   stage("MAVEN-BUILD"){
    steps{
-    withMaven(maven : 'MAVEN_HOME'){
-    bat "mvn clean package"
-    }
+    bat label: '', script: 'mvn clean package'
    }
   }
   }
