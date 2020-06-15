@@ -1,7 +1,8 @@
 pipeline {
  agent any
- environment{
- MAVAN_HOME=C:\DevTools\apache-maven-3.6.3
+ tools{
+   jdk 'JAVA_HOME'
+   maven 'MAVAN_HOME'
  }
  stages{
   stage("Welcome"){
